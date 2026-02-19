@@ -1,0 +1,11 @@
+# ─── Docker Compose ───────────────────────────────────────────
+# Run the app locally with: docker compose up --build
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
