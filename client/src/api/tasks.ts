@@ -1,6 +1,6 @@
 import type { Task, CreateTaskInput, UpdateTaskInput } from '../types/task'
 
-const BASE = '/api/tasks'
+const BASE = `${import.meta.env.VITE_API_URL ?? ''}/api/tasks`
 
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(url, {
